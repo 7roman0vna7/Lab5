@@ -19,7 +19,7 @@ public:
 	PassengerAuto(float speed, int model) {
 		this -> speed = speed;
 		this -> model = model;
-		cout << "Speed is: " << speed << ", model is - " << model << endl;
+		cout << "Скорость: " << speed << ", модель - " << model << endl;
 	}
 };
 
@@ -37,7 +37,7 @@ public:
 	CargoAuto(float speed, int model) {
 		this -> speed = speed;
 		this -> model = model;
-		cout << "Speed is: " << speed << ", model is - " << model << endl;
+		cout << "Скорость: " << speed << ", модель - " << model << endl;
 	}
 };
 
@@ -48,11 +48,23 @@ int Cargo_Auto() {
 };
 
 int main() {
+	setlocale(0, "");
+	int Audi = 0, Lexus = 0, Furgon = 0, Minibuses = 0;
+	int showcase = 0;
+	cout << "Введите четыре цифры по очереди: " << endl;
 	cin >> Audi;
 	cin >> Lexus;
 	cin >> Furgon;
 	cin >> Minibuses;
 	showcase = Audi + Lexus + Furgon + Minibuses;
-	cout << showcase;
+	cout << "Всего имеется транспорта: " << showcase << endl;
+	cout << "Из них: " << endl;
+	cout << Audi << " Audi;" << endl;
+	cout << Lexus << " Lexus;" << endl;
+	cout << Furgon << " фургоны;" << endl;
+	cout << Minibuses << " микроавтобусы." << endl;
+	cout << "Их характеристики (соответственно): " << endl;
+	Passenger_Auto();
+	Cargo_Auto();
 	return 0;
 }
